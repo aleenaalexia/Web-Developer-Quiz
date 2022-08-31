@@ -1,0 +1,84 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+:root{
+    --hue-neutral: 200;
+    --hue-incorrect: red;
+    --hue-correct: green;
+}
+
+body {
+   --hue: var(--hue-neutral);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: hsl(var(--hue), 100%, 20%);
+}
+
+body.correct {
+    --hue: var(var(--hue-correct));
+}
+
+body.incorrect {
+    --hue: var(var(--hue-incorrect));
+}
+
+.quiz-container {
+    width: 800px; 
+    max-width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+
+}
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+
+}
+
+.btn {
+    --hue: var(--hue-neutral);
+    background-color: hsl(var(--hue), 100%, 50%);
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white;
+}
+
+.btn.correct {
+    --hue: var(--hue-correct);
+    color: black;
+
+}
+
+.btn-incorrect {
+    --hue: var(--hue-incorrect);
+
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide {
+    display: none;
+}
+
+#timer-container {
+    position: fixed;
+    right: 10px;
+    top: 5px;
+}
+
